@@ -5,20 +5,23 @@ export const ContactPicker = ({contacts, onChange, defaultListValue}) => {
   const names = contacts.map(contact => contact.name);
 
   return (
-    <select
-      onChange={onChange}
-      id='contactList'
-      required
-    >
-      <option value="" key='default' defaultValue>{defaultListValue}</option>
-      {names.map((name,index) => 
-        <option 
-          value={name}
-          key={index}>
-            {name}
-        </option>)
-      }
-    </select>
+    <div>
+      <label htmlFor='contactList'>Contact:</label>
+      <select
+        onChange={onChange}
+        id='contactList'
+        required
+      >
+        <option value="" key='default' defaultValue>{defaultListValue}</option>
+        {names.map((name,index) => 
+          <option 
+            value={name}
+            key={index}>
+              {name}
+          </option>)
+        }
+      </select>
+    </div>
   );
 };
 

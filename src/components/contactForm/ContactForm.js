@@ -25,6 +25,7 @@ export const ContactForm = ({
 
   return (
     <form onSubmit={handleSubmit}>
+      <label htmlFor='name'>Name:</label>
       <input
         type='text'
         id='name'
@@ -35,6 +36,7 @@ export const ContactForm = ({
         required
       />
 
+      <label htmlFor='phone'>Phone number:</label>
       <input
         type='tel'
         id='phone'
@@ -45,6 +47,7 @@ export const ContactForm = ({
         required
       />
 
+      <label htmlFor='email'>Email:</label>
       <input
         type='email'
         id='email'

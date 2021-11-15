@@ -36,6 +36,7 @@ export const AppointmentForm = ({
   return (
     <div>
       <form onSubmit={handleSubmit}>
+        <label htmlFor='title'>Title:</label>
         <input
           type='text'
           id='title'
@@ -45,6 +46,8 @@ export const AppointmentForm = ({
           required
         />
 
+        <label htmlFor='apt-date'>Date:</label>
+        <br/>
         <input 
           type='date'
           id='apt-date'
@@ -54,7 +57,9 @@ export const AppointmentForm = ({
           placeholder={today}
           required
         />
-
+        <br/>
+        <label htmlFor='apt-time'>Time:</label>
+        <br/>
         <input
           type='time'
           id='apt-time'

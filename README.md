@@ -8,4 +8,4 @@ User can fill out form for Add Contact to populate App contacts, then go to Appo
 * React Router - 5.2.0
 * React Router Dom - 4.0.2
 ## Launch
-Go to http://tojo-appointment-planner.surge.sh and try it out
+Go to https://tojo-appointment-planner.surge.sh and try it out

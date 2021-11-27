@@ -16,10 +16,8 @@ export const AppointmentForm = ({
   handleSubmit,
   defaultListValue
 }) => {
-
   //getting current date
   const today = Utils.getTodayString();
-
   const handleTitleChange = ({target}) => {
     setTitle(target.value);
   }

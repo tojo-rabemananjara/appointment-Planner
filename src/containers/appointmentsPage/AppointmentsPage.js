@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Utils from "../../Util/util";
 import {AppointmentForm} from '../../components/appointmentForm/AppointmentForm';
 import { TileList } from "../../components/tileList/TileList";
 import PropTypes from 'prop-types'; 
@@ -25,6 +26,22 @@ export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
     setDate('');
     setTime('');
     document.getElementById('contactList').value = '';
+    /*
+    Send email with appointment details.
+    */
+    const targetContact = Utils.getContactDetails(contact, contacts);
+    const name = targetContact.name;
+    const contactEmail = targetContact.email;
+    const subject = `${title} with ${name}`;
+    const ebody = `Dear ${name},\n
+I'd like to schedule an appointment with you. Here are the details:
+Title: ${title}
+Date: ${date}
+Time: ${time}\n
+Please let me know if you can make it, or if another time would be better.\n
+Sincerely,\n
+`;
+    window.open(`mailto:${contactEmail}?subject=${subject}&body=${encodeURIComponent(ebody)}`);
   };
 
   return (

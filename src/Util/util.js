@@ -25,6 +25,15 @@ const Utils = {
           .toLocaleDateString("en-US")
           .split("/");
         return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
+    },
+
+    getContactDetails(contactName, contacts) {
+        for (let i = 0; i < contacts.length; i++) {
+            if (contacts[i].name === contactName) {
+                return contacts[i];
+            }
+        }
+        return {};
     }
 
 }

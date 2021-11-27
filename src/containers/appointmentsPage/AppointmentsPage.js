@@ -33,13 +33,8 @@ export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
     const name = targetContact.name;
     const contactEmail = targetContact.email;
     const subject = `${title} with ${name}`;
-    const ebody = `Dear ${name},\n
-I'd like to schedule an appointment with you. Here are the details:
-Title: ${title}
-Date: ${date}
-Time: ${time}\n
-Please let me know if you can make it, or if another time would be better.\n
-Sincerely,\n
+    const ebody = `Dear ${name},\r\n\r\nI'd like to schedule an appointment with you. Here are the details:\r\nTitle: ${title}\r\nDate: ${date}
+Time: ${time}\r\nPlease let me know if you can make it, or if another time would be better.\r\n\r\nSincerely,\r\n
 `;
     window.open(`mailto:${contactEmail}?subject=${subject}&body=${encodeURIComponent(ebody)}`);
   };

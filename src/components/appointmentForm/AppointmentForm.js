@@ -1,6 +1,6 @@
 import React from "react";
 import Utils from "../../Util/util";
-import {ContactPicker} from '../../components/contactPicker/ContactPicker';
+import {ContactPicker} from '../contactPicker/ContactPicker';
 import PropTypes from 'prop-types';
 
 export const AppointmentForm = ({
